@@ -9,7 +9,9 @@ module.exports = {
 
   async function create(req, res) {
     try {
+      req.body.departs += "T00:00";
       await Flight.create(req.body);
+      console.log(req.body);
       // Always redirect after CUDing data
       // We'll refactor to redirect to the movies index after we implement it
       res.redirect('/flights/new');

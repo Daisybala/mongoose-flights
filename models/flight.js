@@ -10,9 +10,10 @@ const destinationSchema = new Schema({
     arrival: {
         type: Date,
         default: function() {
-            const today = new Date();
-            const year = today.getFullYear();
-            return today.setFullYear(year + 1);
+            // const today = new Date();
+            // const year = today.getFullYear();
+            // return today.setFullYear(year + 1);
+            return new Date().toLocaleDateString();
         }
     }
 },{

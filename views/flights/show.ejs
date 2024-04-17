@@ -18,15 +18,15 @@
   <!-- <textarea name="content"></textarea><br> -->
   <label>Airport:</label>
   <select name="airport">
-    <option value="1">select a destination</option>
+    <option value="select a destination">select a destination</option>
     <option value="AUS">AUS</option>
     <option value="DFW">DFW</option>
     <option value="DEN">DEN</option>
     <option value="SAN">SAN</option>
-    <option value="LAX" selected>LAX</option>
+    <option value="select a destination" selected>select a destination</option>
   </select><br>
   <label>Arrival
-    <input type="date" name="arrivals">
+    <input type="date" name="arrival">
   </label><br>
   <input type="submit" value="Add Destination"> 
 </form>
@@ -46,7 +46,7 @@
           <!-- .toLocaleDateString() provides a more friendly date format -->
           <td><%= d.createdAt.toLocaleDateString() %></td>
           <td><%= d.airport %></td>
-          <td><%= d.airport %></td>
+          <td><%= d.arrival %></td>
         </tr>
       <% }); %>
     </tbody>
