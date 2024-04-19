@@ -6,8 +6,8 @@ module.exports = {
 
 async function create(req, res) {
     const flight = await Flight.findById(req.params.id);
-    const tickets = await Ticket.find({flight: flight._id});
-    console.log(tickets);
+    // const tickets = await Ticket.find({flight: flight._id});
+    // console.log(tickets);
     // We can push (or unshift) subdocs into Mongoose arrays
     req.body.arrival += "T00:00";
     console.log(flight);
