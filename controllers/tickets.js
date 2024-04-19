@@ -23,7 +23,7 @@ async function create(req, res) {
     console.log(err);
     //   res.render('tickets/new', { errorMsg: err.message });
     }
-    res.redirect('/flights/${flight._id}');
+    res.redirect(`/flights/${flight._id}`);
 }
 
 function newTicket(req,res) {

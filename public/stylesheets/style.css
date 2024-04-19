@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  height: 50vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-areas: 
@@ -78,8 +78,9 @@ nav > a.active {
   margin-left: auto;
 }
 
-table {
-  font-size: 20px;
+#add-flight {
+  padding: 10px;
+
 }
 
 table thead th {
@@ -129,8 +130,163 @@ table td {
   grid-column: 2 / 3;
   margin-bottom: 2rem;
 }
+h2{
+  padding: 20px;
+}
+
+table {
+  width: 90%; /* Control the width of the table */
+  margin: 20px auto; /* Center the table and provide some spacing */
+  border-collapse: collapse; /* Ensures borders between cells are merged */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+  background-color: #ffffff; /* Light background for the table */
+}
+
+table thead th {
+  background-color: #424748; /* Darker shade for header for contrast */
+  color: #E8ECEB; /* Light text color for readability */
+  text-transform: uppercase; /* Makes header text uppercase for a professional look */
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f4f4f4; /* Zebra striping for rows */
+}
+
+table tbody tr:hover {
+  background-color: #ddf4ff; /* Highlight row on hover for better interaction feedback */
+}
+
+/* Typography Adjustments */
+body, table {
+  font-size: 16px; /* Increases base font size for better readability */
+}
+
+h2 {
+  font-size: 24px; /* Makes h2 slightly larger */
+  text-align: center; /* Centers the heading */
+}
+
+/* Links Styling */
+#list a {
+  color: #424748; /* Ensures text color matches the theme */
+  font-weight: bold; /* Makes links bold */
+}
 
 
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #new-form {
+    grid-template-columns: 1fr; /* Stacks the form fields in a single column on small screens */
+  }
+}
+#add-flight {
+  width: 50%; /* Adjust the width as needed */
+  margin: 20px auto; /* Center the form on the page */
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background for the form */
+  border-radius: 8px; /* Rounded corners for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#add-flight label {
+  display: block; /* Makes each label block level, causing a line break */
+  margin-top: 20px; /* Adds space at the top of each label */
+  font-size: 16px; /* Sets a readable font size */
+}
+
+#add-flight label:first-child {
+  margin-top: 0; /* Removes margin from the first label */
+}
+
+#add-flight input, #add-flight select {
+  width: 100%; /* Full width of the form */
+  padding: 8px; /* Padding for input fields */
+  margin-top: 5px; /* Space between the label text and the input field */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  border: 1px solid #ccc; /* Subtle border for inputs */
+  border-radius: 4px; /* Rounded borders for inputs */
+}
+
+#add-flight button {
+  display: block; /* Ensures the button is a block element */
+  width: 100%; /* Full width of the form */
+  padding: 10px 0; /* Padding for the button */
+  margin-top: 20px; /* Space above the button */
+  background-color: #424748; /* Dark background for the button */
+  color: white; /* Light text for visibility */
+  border: none; /* No border for the button */
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+#add-flight button:hover {
+  background-color: #33383b; /* Slightly darker background on hover */
+}
+
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  gap: 10px 20px;
+}
+
+#show-page div {
+  padding: 8px;
+}
+
+#show-page div:nth-child(odd) {
+  font-weight: bold; /* Makes labels bold */
+  text-align: right; /* Aligns labels to the right for a neat look */
+}
+
+#show-page form {
+  grid-column: 1 / -1; /* Spans the form across all columns */
+  display: block;
+  text-align: center;
+}
+
+/* Destination Form Styling */
+#add-destination-form {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#add-destination-form label {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#add-destination-form select, #add-destination-form input[type="date"], #add-destination-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#add-destination-form input[type="submit"] {
+  background-color: #424748;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#add-destination-form input[type="submit"]:hover {
+  background-color: #33383b;
+}
 
 
 
